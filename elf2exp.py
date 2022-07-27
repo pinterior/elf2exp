@@ -47,6 +47,8 @@ def ceil_n(n, m):
 
 stack_end = ceil_n(size + args.stack, 4096)
 
+# https://github.com/nabe-abk/free386/blob/main/doc-ja/dosext/mp_head.txt
+
 mp_hdr = bytearray(32)
 exp = mp_hdr + image
 exp[0x00:0x02] = b'MP'
