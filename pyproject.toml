@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elf2exp"
+version = "0.0.3"
+description = "ELF to PharLap .EXP converter for i386-pc-run386 toolchain"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+   "Operating System :: OS Independent",
+]
+dependencies = [
+   "pyelftools==0.29",
+]
+
+[project.scripts]
+elf2exp = "elf2exp:main"

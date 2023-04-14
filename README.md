@@ -2,6 +2,12 @@
 
 script to convert ELF binary to `.EXP` file for 386|DOS-Extender.
 
+## install
+
+```
+pip install https://github.com/pinterior/elf2exp.git@0.0.3
+```
+
 ## toolchain
 
 ### binutils
@@ -10,7 +16,7 @@ script to convert ELF binary to `.EXP` file for 386|DOS-Extender.
 git clone https://github.com/pinterior/binutils-gdb.git -b run386-binutils-2_38
 mkdir binutils-gdb/build
 cd binutils-gdb/build
-../configure --target=i386-pc-run386 --prefix="$HOME"/local --disable-gdb --disable-nls
+../configure --target=i386-pc-run386 --prefix="$HOME"/.local --disable-gdb --disable-nls
 make
 make install
 ```
@@ -23,7 +29,7 @@ git clone https://github.com/pinterior/newlib.git -b run386-newlib-4.1.0
 ln -s ../newlib/newlib gcc/newlib
 mkdir gcc/build
 cd gcc/build
-../configure --prefix="$HOME"/local --target=i386-pc-run386 --with-newlib --disable-nls --enable-languages=c
+../configure --prefix="$HOME"/.local --target=i386-pc-run386 --with-newlib --disable-nls --enable-languages=c,c++ --disable-tls
 make
 make install
 ```
@@ -47,7 +53,7 @@ elf2exp.py hello hello.exp
 ```
 
 ```
-' DOS
+' MS-DOS
 run386.exe -nocrtreset hello.exp
 ```
 
