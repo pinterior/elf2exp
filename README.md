@@ -73,7 +73,7 @@ int main() {
 ```sh
 # Linux
 i386-pc-run386-gcc -o hello hello.c
-elf2exp.py hello hello.exp
+elf2exp hello hello.exp
 ```
 
 ```bat
@@ -83,7 +83,7 @@ run386.exe -nocrtreset hello.exp
 
 ## TODO
 
-- `argc`, `argv` and `environ`
-- many missing system calls
-- `-msoft-float` toolchain
-- C++
+- missing system calls
+- `long double` handling on `-msoft-float` toolchain
+- signals
+- LF -> CRLF conversion on text mode
